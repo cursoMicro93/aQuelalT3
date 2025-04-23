@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="aQuelalT3.Views.Home"
+             Title="Home">
+    <ContentPage.Resources>
+        <Style x:Key="estiloLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="TextColor" Value="Blue"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        </Style>
+    </ContentPage.Resources>
+    <VerticalStackLayout
+        Spacing="20"
+        Padding="20">
+        <Label 
+            Style="{StaticResource estiloLabel}"
+            Text="Inicio Sesion"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Image Source="uisrael.jpg"
+               WidthRequest="200"
+            />
+        <!--Tabla-->
+        <Grid>
+            <!--Filas-->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!--Columnas-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Text="Usuario"
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                Grid.Row="0"
+                Grid.Column="0"
+                />
+            <Entry x:Name="txtUsuario"
+                   Placeholder="Ingresar el usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+            <Label
+                Text="Contrasenia"
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                Grid.Row="1"
+                Grid.Column="0"
+                />
+            <Entry x:Name="txtContrasenia"
+                   Placeholder="Ingresar contrasenia"
+                   IsPassword="True"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                />
+            
+        </Grid>
+
+        <Button x:Name="btnIniciarSesion" Text="Iniciar sesion" Clicked="btnIniciarSesion_Clicked"/>
+
+        <Button x:Name="btnRegistro" Text="Registrar" Clicked="btnRegistro_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
